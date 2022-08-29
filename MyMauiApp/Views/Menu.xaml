@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="MyMauiApp.Views.Menu"
+             >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#90EE90">
+            <Frame BackgroundColor="#228B22"  Margin="0,-25,0,40" CornerRadius="30" HeightRequest="250" WidthRequest="400">
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout >
+
+                        <ImageButton Source="https://media.istockphoto.com/illustrations/logout-icon-soft-green-background-illustration-id1163557279" Aspect="AspectFit" 
+                                     HorizontalOptions="EndAndExpand"               
+                                     HeightRequest="45"    
+                                     Clicked="ImageButton_Clicked"
+                                     Margin="300,0,0,0"
+                                     IsEnabled="True"
+                                     >
+
+                        </ImageButton>
+
+
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Padding="20,0,0,15">
+                        <Label x:Name="MyName" FontSize="27" TextColor="White" FontFamily="Times New Roman">
+
+                        </Label>
+                        <Label Text="How can I help you" FontSize="27" TextColor="White" FontFamily="Times New Roman" >
+
+                        </Label>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120" />
+                    <RowDefinition  Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" Grid.RowSpan="2" BackgroundColor="#F0FFF0" Margin="10" CornerRadius="20" Padding="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />
+                    </Frame.GestureRecognizers>
+                    <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="-40" >
+                        <Image Source="crop.png" Aspect="AspectFill" Margin="40" >
+
+                        </Image>
+                        <Label Text="Get Crop&#x0a;Recommendation" Padding="0,40" Margin="-40"  FontSize="17" HorizontalTextAlignment="Center" FontAttributes="Bold">
+
+                        </Label>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="1" Grid.RowSpan="2" BackgroundColor="#F0FFF0" Margin="10" CornerRadius="20" Padding="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="-40" >
+                        <Image Source="pest.png" Aspect="AspectFill" Margin="40">
+
+                        </Image>
+                        <Label Text="Solutions for Pests&#x0a;and Diseases" Padding="0,40"  Margin="-40" FontSize="17" HorizontalTextAlignment="Center" FontAttributes="Bold">
+
+                        </Label>
+
+
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120" />
+                    <RowDefinition  Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" Grid.RowSpan="2" BackgroundColor="#F0FFF0" Margin="10" CornerRadius="20" Padding="50" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="-40">
+                        <Image Source="fertilizer.png" Aspect="AspectFill" Margin="40">
+
+                        </Image>
+                        <Label Text="Fertilizer&#x0a;Recommendation" Padding="0,40"  Margin="-40" FontSize="17" HorizontalTextAlignment="Center" FontAttributes="Bold">
+
+                        </Label>
+
+
+                    </StackLayout>
+
+
+                </Frame>
+                <Frame Grid.Column="1" Grid.RowSpan="2" BackgroundColor="#F0FFF0" Margin="10" CornerRadius="20" Padding="50">
+                    <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="-40">
+                        <Image Source="location.png" Aspect="AspectFill" Margin="40">
+
+                        </Image>
+                        <Label Text="Suitable Locations" Padding="0,60"  Margin="-40" FontSize="17" HorizontalTextAlignment="Center" FontAttributes="Bold">
+
+                        </Label>
+
+
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
